@@ -1,0 +1,153 @@
+
+
+## The number of loci caught by each filter.
+## ipyrad API location: [assembly].stats_dfs.s7_filters
+
+                            total_filters  applied_order  retained_loci
+total_prefiltered_loci             268247              0         268247
+filtered_by_rm_duplicates            5865           5865         262382
+filtered_by_max_indels              10735          10735         251647
+filtered_by_max_snps                15880           9488         242159
+filtered_by_max_shared_het           1285            681         241478
+filtered_by_min_sample             150760         149460          92018
+filtered_by_max_alleles             15949           6005          86013
+total_filtered_loci                 86013              0          86013
+
+
+## The number of loci recovered for each Sample.
+## ipyrad API location: [assembly].stats_dfs.s7_samples
+
+                                          sample_coverage
+A1_AF1845A_A_flavescens                             28991
+A2_QCAZ45640_A_elegans                              26415
+A3_QCAZ62211_A_condor                               34327
+A4_R351A_varius_C_Richards                            248
+B1_C1021An_A_sp_nov_Cesar                           20513
+B2_QCAZ46824_A_exiguus_Rio_Mazan                    34819
+B3_QCAZ63376_A_palmatus_Rio_Topo                    47288
+B4_R352Ace_A_certus_Ibanez                          31546
+C1_JCSRha                                             520
+C2_QCAZ48630_A_wampukrum_Rio_Pasme                  13476
+C3_QCAZ63506_A_cf_podocarpus                        39468
+C4_R354_A_glyphus_Ibanez                            30151
+D1_QCAZ21123_A_exiguus_Frutatian                    34667
+D2_Q55103_A_elegans_Durango                          1594
+D3_QCAZ64462_A_podocarpus                           31653
+D4_R357Ali_A_limosus                                30572
+E1_QCAZ30617_A_spumrius_Pucayacu                    28863
+E3_QCAZ65312_A_longirostris_Goaltal                 34151
+F1_F1_QCAZ32406_A_exiguus_QCAZuimsacocha            40552
+F2_QCAZ57948_A_sp_nov_9deOctubre                    36100
+F3_QCAZ66576_A_palmatus_Rio_Topo                    32166
+G1_Q32664_A_spumarius_Yasuni_km38                    3862
+G2_R93Amin                                           2732
+H1_QCAZ38427_A_nanay_Rio_Patul                      41037
+H2_R94Amin                                            125
+H3_QCAZ67498_A_longirostris_Goaltal                 32613
+H4_T6877_Bufo_nebulifer                                 1
+KU_201106_T6225Ai_A_ignescens_CTPX                  21841
+KU_201113_T6223_Ai_A_ignescens_Cotopaxi             30070
+KU_202248_T6222_A_ignescens_Bolivar                 14841
+QCAZ66757A_A_condor                                 30059
+
+
+## The number of loci for which N taxa have data.
+## ipyrad API location: [assembly].stats_dfs.s7_loci
+
+    locus_coverage  sum_coverage
+1                0             0
+2                0             0
+3                0             0
+4            23314         23314
+5            12562         35876
+6             7429         43305
+7             5414         48719
+8             4319         53038
+9             3605         56643
+10            3101         59744
+11            2810         62554
+12            2733         65287
+13            2495         67782
+14            2467         70249
+15            2378         72627
+16            2402         75029
+17            2167         77196
+18            2126         79322
+19            1909         81231
+20            1557         82788
+21            1212         84000
+22             900         84900
+23             663         85563
+24             350         85913
+25              86         85999
+26              12         86011
+27               2         86013
+28               0         86013
+29               0         86013
+30               0         86013
+31               0         86013
+
+
+## The distribution of SNPs (var and pis) per locus.
+## var = Number of loci with n variable sites (pis + autapomorphies)
+## pis = Number of loci with n parsimony informative site (minor allele in >1 sample)
+## ipyrad API location: [assembly].stats_dfs.s7_snps
+
+     var  sum_var    pis  sum_pis
+0   3207        0  20346        0
+1   4346     4346  13218    13218
+2   4892    14130  10171    33560
+3   5356    30198   8521    59123
+4   5627    52706   7162    87771
+5   5739    81401   6096   118251
+6   5841   116447   5218   149559
+7   5644   155955   4224   179127
+8   5524   200147   3331   205775
+9   5283   247694   2540   228635
+10  4927   296964   1868   247315
+11  4457   345991   1327   261912
+12  4127   395515    825   271812
+13  3721   443888    543   278871
+14  3475   492538    313   283253
+15  3152   539818    180   285953
+16  2815   584858     86   287329
+17  2410   625828     33   287890
+18  2083   663322      9   288052
+19  1830   698092      1   288071
+20  1557   729232      1   288091
+
+
+## Final Sample stats summary
+
+                                          state  reads_raw  reads_passed_filter  clusters_total  clusters_hidepth  hetero_est  error_est  reads_consens  loci_in_assembly
+A1_AF1845A_A_flavescens                       7   10149043             10128462          208206            127706    0.010526   0.001533         118930             28991
+A2_QCAZ45640_A_elegans                        7    4857324              4847804          109731             73608    0.010775   0.001973          68686             26415
+A3_QCAZ62211_A_condor                         7    6798645              6785314          135514             86915    0.010264   0.001677          81344             34327
+A4_R351A_varius_C_Richards                    7     271412               270893            3665              2317    0.011729   0.000996           2141               248
+B1_C1021An_A_sp_nov_Cesar                     7    5173528              5162899          171296             94316    0.012056   0.002130          87254             20513
+B2_QCAZ46824_A_exiguus_Rio_Mazan              7    4086260              4078040          146174             90113    0.011522   0.002112          84243             34819
+B3_QCAZ63376_A_palmatus_Rio_Topo              7   13337476             13310117          289106            177389    0.014184   0.001987         162434             47288
+B4_R352Ace_A_certus_Ibanez                    7   10742013             10720338          164131            120766    0.010582   0.001906         112551             31546
+C1_JCSRha                                     7    5675984              5665762           23291             11863    0.025057   0.004154           9844               520
+C2_QCAZ48630_A_wampukrum_Rio_Pasme            7     778680               776092           86236             36006    0.010320   0.002932          32970             13476
+C3_QCAZ63506_A_cf_podocarpus                  7    7912920              7896839          188019            118025    0.012243   0.001861         110158             39468
+C4_R354_A_glyphus_Ibanez                      7    7535119              7521395          147422            108351    0.011149   0.002230         100855             30151
+D1_QCAZ21123_A_exiguus_Frutatian              7    3964907              3956770          125821             77562    0.012804   0.002180          72380             34667
+D2_Q55103_A_elegans_Durango                   7      69487                69254            6696              4265    0.008822   0.002346           4006              1594
+D3_QCAZ64462_A_podocarpus                     7    3340493              3333723          123180             77261    0.012119   0.002309          72100             31653
+D4_R357Ali_A_limosus                          7    9833369              9813409          145995            110543    0.011420   0.002016         102787             30572
+E1_QCAZ30617_A_spumrius_Pucayacu              7    7339780              7325087          179243            106658    0.010029   0.001817          99107             28863
+E3_QCAZ65312_A_longirostris_Goaltal           7    8455263              8438167          178058            113883    0.011302   0.001716         106320             34151
+F1_F1_QCAZ32406_A_exiguus_QCAZuimsacocha      7    6625092              6612395          180102            102592    0.012596   0.001881          95808             40552
+F2_QCAZ57948_A_sp_nov_9deOctubre              7    4723853              4713906          163298             95594    0.010417   0.002190          89159             36100
+F3_QCAZ66576_A_palmatus_Rio_Topo              7   10071422             10050176          193721            119266    0.010198   0.001782         110792             32166
+G1_Q32664_A_spumarius_Yasuni_km38             7     156159               155795           15076              9039    0.009392   0.002705           8416              3862
+G2_R93Amin                                    7     132963               132607           15068              7963    0.010227   0.002797           7369              2732
+H1_QCAZ38427_A_nanay_Rio_Patul                7    8919550              8901878          174426            107139    0.012508   0.001511         100049             41037
+H2_R94Amin                                    7      11539                11466            1760               787    0.009281   0.001984            740               125
+H3_QCAZ67498_A_longirostris_Goaltal           7    6989690              6975715          139312             90030    0.011804   0.001753          83957             32613
+H4_T6877_Bufo_nebulifer                       7       5519                 5509            2390                52    0.025869   0.003674             41                 1
+KU_201106_T6225Ai_A_ignescens_CTPX            7    2052622              2048921           64870             50519    0.008797   0.002201          47841             21841
+KU_201113_T6223_Ai_A_ignescens_Cotopaxi       7    3384811              3378569           96766             72308    0.009662   0.002084          68107             30070
+KU_202248_T6222_A_ignescens_Bolivar           7    1551028              1548125           41567             32112    0.008859   0.002211          30333             14841
+QCAZ66757A_A_condor                           7    3950278              3942548          118617             75253    0.010645   0.002293          70255             30059
