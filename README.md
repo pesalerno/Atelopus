@@ -2,13 +2,13 @@
 
 
 
-Teniamos tres librerias de ddRAD para un total de 32 individuos de Atelopus. Por tanto, necesitabamos hacer primero el demultiplexing por cada pool por separado, y utilizando un [barcodes file](https://github.com/pesalerno/Atelopus/blob/master/atelopus_barcodes_pool1b.txt) para cada pool, de la siguiente manera: 
+Teniamos tres librerias de ddRAD para un total de 32 individuos de *Atelopus*. Por tanto, necesitabamos hacer primero el demultiplexing por cada pool por separado, y utilizando un [barcodes file](https://github.com/pesalerno/Atelopus/blob/master/atelopus_barcodes_pool1b.txt) para cada pool, de la siguiente manera: 
 
 	ipyrad -p params-pool1.txt -s 12
 
 Luego de hacer esto para los tres pools de secuencias, debiamos hacerle un "merge" a los tres params files (no se puede hacer manualmente porque son necesarios los archivos `.json` que son creados en los primeros dos pasos). 
 
-Para hacer el merge de los tres pools, se hace lo siguiente: 
+Para hacer el *merge* de los tres pools, se hace lo siguiente: 
 
 	ipyrad -m merged-params pool1_params_c.txt pool2_params_c.txt pool3_params_c.txt
 
@@ -19,11 +19,15 @@ Esto resulta que la linea 3 de los "demultiplexed files" salga asi:
                                    ## [4] [sorted_fastq_path]: Location of demultiplexed/sorted fastq files
 
 
-Finalmente, para poder correr varios analisis de ipyrad y determinar el optimo para el clustering threshold, hicimos un "branching" del analisis a partir del 3er paso, con el siguiente codigo (y para cada clustering threshold):
+Finalmente, para poder correr varios analisis de ipyrad y determinar el optimo para el clustering threshold, utilizando el argumento `-b` hicimos un *"branching"* del analisis a partir del 3er paso, con el siguiente codigo (y para cada clustering threshold):
 
 	ipyrad -p params-merged-params.txt -b clust86
 
-Los archivos de los parametros eran todos idenrticos a [este](https://github.com/pesalerno/Atelopus/blob/master/params-clust96.txt), solo variando el clustering threshold. Luego de eso, se editaron manualmente los params files montaron el resto de los pasos y analisis de ipyrad para cada uno de los "branches" con su distinto clustering threshold, utilizando un script de `bash` y con el siguiente codigo: 
+Los archivos de los parametros eran todos identicos a [este](https://github.com/pesalerno/Atelopus/blob/master/params-clust96.txt), solo variando el clustering threshold. Luego de eso, se editaron manualmente los params files en la linea 14:
+
+	0.96                           ## [14] [clust_threshold]: Clustering threshold for de novo assembly
+
+para poner el clustering threshold correcto, y se montaron el resto de los pasos y analisis de ipyrad para cada uno de los "branches" utilizando un script de `bash` y con el siguiente codigo: 
 
 	#!/bin/bash
 
