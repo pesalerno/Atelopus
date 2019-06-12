@@ -42,3 +42,4 @@ Luego de finalizados todos los analisis, se recopilaron resultados a nivel globa
 
 ![](https://github.com/pesalerno/Atelopus/blob/master/ipyrad-results-1.png)
 
+Finalmente, se observa que a partir del clustering threshold de 94%, la gran mayoria de los loci nuevos que se construyen son filtrados como basura, por lo que lo mejor para ser conservadores es escoger los resultados basados en la genotipificacion usando **clust\_thresh\_94**.
