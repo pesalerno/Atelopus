@@ -25,5 +25,13 @@ Luego de eso, se montaron el resto de los pasos y analisis de ipyrad para cada u
 	ipyrad -p params-clust93.txt -s 34567
 	#etc....
 
-Luego de finalizados todos los analisis, se recopilaron resultados a nivel global (es decir, por genotipificacion/matriz de datos), utilizando los outputs de [clust86_stats.txt]() y de [s6_cluster_stats_c86.txt](), lo que nos dieron los siguientes graficos:
+Luego de finalizados todos los analisis, se recopilaron resultados a nivel global (es decir, por genotipificacion/matriz de datos), utilizando los outputs de [clust86_stats.txt](https://github.com/pesalerno/Atelopus/blob/master/clust86_stats.txt) y de [s6_cluster_stats_c86.txt](https://github.com/pesalerno/Atelopus/blob/master/s6_cluster_stats_c86.txt), lo que nos dieron los siguientes graficos:
+
+1. En este grafico se puede ver que tanto el numero de loci/clusters como el numero de "singletons" (clusters unicos para un individuo) aumenta relativamente gradual con cada incremento del threshold, con un aumento un poco mayor luego de clust_thresh=94. 
+
+![](https://github.com/pesalerno/Atelopus/blob/master/ipyrad-results-2.png)
+
+2. En este grafico se ve que a pesar de que el numero total de loci antes de filtros y de calculo de error incrementa bastante a medida que incrementa el clustering threshold, el numero de loci despues de todos los filtros incrementa muy poco. 
+
+![](https://github.com/pesalerno/Atelopus/blob/master/ipyrad-results-1.png)
 
