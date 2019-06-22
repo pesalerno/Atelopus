@@ -40,10 +40,24 @@ Luego de finalizados todos los analisis, se recopilaron resultados a nivel globa
 
 1. En este grafico se puede ver que tanto el numero de loci/clusters como el numero de "singletons" (clusters unicos para un individuo) aumenta relativamente gradual con cada incremento del threshold, con un aumento un poco mayor luego de clust_thresh=94. 
 
-![](https://github.com/pesalerno/Atelopus/blob/master/ipyrad-results-2.png)
+![](https://github.com/pesalerno/Atelopus/blob/master/ipyrad-2.png)
 
 2. En este grafico se ve que a pesar de que el numero total de loci antes de filtros y de calculo de error incrementa bastante a medida que incrementa el clustering threshold, el numero de loci despues de todos los filtros incrementa muy poco. 
 
-![](https://github.com/pesalerno/Atelopus/blob/master/ipyrad-results-1.png)
+![](https://github.com/pesalerno/Atelopus/blob/master/ipyrad-1.png)
 
-Finalmente, se observa que a partir del clustering threshold de 94%, la gran mayoria de los loci nuevos que se construyen son filtrados como basura, por lo que lo mejor para ser conservadores es escoger los resultados basados en la genotipificacion usando **clust\_thresh\_94**.
+Finalmente, se observa que a partir del clustering threshold de 94%, la gran mayoria de los loci nuevos que se construyen son filtrados como basura, por lo que lo mejor para ser conservadores es escoger los resultados basados en la genotipificacion usando **clust\_thresh\_93**.
+
+Ademas de probar los efectos de los distintos clustering thresholds, quisimos evaluar los efectos de tres parametros adicionales: 
+
+	5, 5                           ## [19] [max_Ns_consens]: Max N's (uncalled bases) in consensus (R1, R2)
+	8, 8                           ## [20] [max_Hs_consens]: Max Hs (heterozygotes) in consensus (R1, R2)
+	20, 20                         ## [22] [max_SNPs_locus]: Max # SNPs per locus (R1, R2)
+
+En estos analisis, encontramos el siguiente resultado en cuanto a numeros de SNPs finales pre y post-filtering: 
+
+![imagen-aca]()
+
+Los datos con los cuales se graficaron las anteriores figuras pueden encontrarse [aqui](https://github.com/pesalerno/Atelopus/blob/master/Ateolpus-clust-tests.xlsx).
+
+
