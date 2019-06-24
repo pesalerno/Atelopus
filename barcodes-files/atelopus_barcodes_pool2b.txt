@@ -1,0 +1,6 @@
+B4_R352Ace_A_certus_Ibanez	AACCA
+C4_R354_A_glyphus_Ibanez	CGATC
+D4_R357Ali_A_limosus	TCGAT
+KU_202248_T6222_A_ignescens_Bolivar	TGCAT
+KU_201113_T6223_Ai_A_ignescens_Cotopaxi	CAACC
+KU_201106_T6225Ai_A_ignescens_CTPX	GGTTG

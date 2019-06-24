@@ -2,7 +2,7 @@
 
 
 
-Teniamos tres pools de librerias de ddRAD para un total de 31 individuos de *Atelopus*. Por tanto, necesitabamos hacer primero el demultiplexing por cada pool por separado, utilizando un [barcodes file por cada pool](https://github.com/pesalerno/Atelopus/blob/master/atelopus_barcodes_pool1b.txt), de la siguiente manera: 
+Teniamos tres pools de librerias de ddRAD para un total de 31 individuos de *Atelopus*. Por tanto, necesitabamos hacer primero el demultiplexing por cada pool por separado, utilizando un [barcodes file por cada pool](https://github.com/pesalerno/Atelopus/tree/master/barcodes-files), de la siguiente manera: 
 
 	ipyrad -p params-pool1.txt -s 12
 
