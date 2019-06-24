@@ -58,6 +58,41 @@ En estos analisis, encontramos el siguiente resultado en cuanto a numeros de SNP
 
 ![imagen-aca](https://github.com/pesalerno/Atelopus/blob/master/figures/max_SNPs_per_locus.png)
 
-Los datos con los cuales se graficaron las anteriores figuras pueden encontrarse [aqui](https://github.com/pesalerno/Atelopus/blob/master/Ateolpus-clust-tests.xlsx).
+Los datos con los cuales se graficaron las anteriores figuras pueden encontrarse [aqui](https://github.com/pesalerno/Atelopus/blob/master/files/Ateolpus-clust-tests.xlsx).
+
+**plink | filtrando datos**
+
+Primero, transformamos el archivo `.vcf` utilizando **vcftools** de esta manera: 
+
+	vcftools --vcf path/to/file.vcf --plink --out filename
 
 
+Ahora que tenemos nuestros archivos `.ped` y `.map`, podemos correr los filtros en [plink](http://zzz.bwh.harvard.edu/plink/download.shtml#download), uno por uno, de la siguiente manera. 
+
+
+Primero filtramos loci con demasiados datos que faltan:
+
+    ./plink --file input-name --geno 0.25 --recode --out output-filename_a --noweb #filtrar loci que se genotipificaron en menos del 75% de los individuos
+
+
+Este filtro hace que la matriz de datos de reduzca de 830228 SNPs a 3977 SNPS, con un ´genotyping rate´de 0.974593. Segundo, vemos los individuos que tienen muchos datos que faltan: 
+
+    ./plink --file input-filename_a --mind 0.5 --recode --out output-filename_b --noweb
+
+Este filtro nos indica que hay siete individuos en nuestros datos que tienen mas del 50% de los datos que faltan: 
+
+	A4_R351A_varius_C_Richards
+	C1_JCSRha
+	D2_Q55103_A_elegans_Durango
+	G1_Q32664_A_spumarius_Yasuni_km38
+	G2_R93Amin
+	H2_R94Amin
+	H4_T6877_Bufo_nebulifer
+
+Finalmente, veamos los loci que tienen un minor allele frequency menos al 1%:
+
+    ./plink --file input-filename_b --maf 0.01 --recode --out output-filename_c --noweb
+    
+Con este ultimo filtro, solo se pierden un total de 42 SNPs, por lo que quedamos despues de este filtro con un total de 3935 SNPs. Luego de todos estos filtros tenemos nuestros archivos finales de [`.ped`]()y [`.map`]().
+
+	
