@@ -56,7 +56,7 @@ Luego de probar los efectos de los distintos clustering thresholds, quisimos eva
 
 En estos analisis, encontramos el siguiente resultado en cuanto a numeros de SNPs finales pre y post-filtering: 
 
-![imagen-aca]()
+![imagen-aca](https://github.com/pesalerno/Atelopus/blob/master/figures/max_SNPs_per_locus.png)
 
 Los datos con los cuales se graficaron las anteriores figuras pueden encontrarse [aqui](https://github.com/pesalerno/Atelopus/blob/master/Ateolpus-clust-tests.xlsx).
 
