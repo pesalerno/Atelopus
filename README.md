@@ -75,7 +75,7 @@ Primero filtramos loci con demasiados datos que faltan:
     ./plink --file input-name --geno 0.25 --recode --out output-filename_a --noweb #filtrar loci que se genotipificaron en menos del 75% de los individuos
 
 
-Este filtro hace que la matriz de datos de reduzca de 830228 SNPs a 3977 SNPS, con un ´genotyping rate´de 0.974593. Segundo, vemos los individuos que tienen muchos datos que faltan: 
+Este filtro hace que la matriz de datos de reduzca de 830,228 SNPs originalmente exportados de **ipyrad** a 3977 SNPS, con un ´genotyping rate´de 0.974593. Segundo, vemos los individuos que tienen muchos datos que faltan: 
 
     ./plink --file input-filename_a --mind 0.5 --recode --out output-filename_b --noweb
 
@@ -95,4 +95,12 @@ Finalmente, veamos los loci que tienen un minor allele frequency menos al 1%:
     
 Con este ultimo filtro, solo se pierden un total de 42 SNPs, por lo que quedamos despues de este filtro con un total de 3935 SNPs. Luego de todos estos filtros tenemos nuestros archivos finales de [`.ped`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.ped)y [`.map`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.map).
 
+Hicimos exactamente todos los mismos pasos anteriores utilizando el 'default' del parametro #22 (max_snps_locus) y tambien utilizando una matrix donde solo se permitian un maximo de 10 SNPs per locus, para sesgar este ultimo analisis hacia loci que son mas conservados. En este caso, se comenzaron con un total de 673,624 SNPs originalmente exportados de **ipyrad**, terminamos con: 
+
+	SNPS = 2324 #luego de --geno 0.25
+	inds = 24
+	SNPs = 2293 #luego de --maf 0.01
+	genotyping rate final = 0.974182
 	
+Aca se pueden encontrar los archivos [`.ped`]() y [`.map`]() resultantes. 
+
