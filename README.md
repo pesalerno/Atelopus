@@ -2,7 +2,7 @@
 
 
 
-Teniamos tres librerias de ddRAD para un total de 32 individuos de *Atelopus*. Por tanto, necesitabamos hacer primero el demultiplexing por cada pool por separado, y utilizando un [barcodes file](https://github.com/pesalerno/Atelopus/blob/master/atelopus_barcodes_pool1b.txt) para cada pool, de la siguiente manera: 
+Teniamos tres pools de librerias de ddRAD para un total de 31 individuos de *Atelopus*. Por tanto, necesitabamos hacer primero el demultiplexing por cada pool por separado, utilizando un [barcodes file por cada pool](https://github.com/pesalerno/Atelopus/blob/master/atelopus_barcodes_pool1b.txt), de la siguiente manera: 
 
 	ipyrad -p params-pool1.txt -s 12
 
@@ -12,7 +12,7 @@ Para hacer el *merge* de los tres pools, se hace lo siguiente:
 
 	ipyrad -m merged-params pool1_params_c.txt pool2_params_c.txt pool3_params_c.txt
 
-Esto resulta que la linea 3 de los "demultiplexed files" salga asi: 
+Esto resulta que la linea 3 de los *"demultiplexed files"* salga asi: 
 
 	                               ## [2] [raw_fastq_path]: Location of raw non-demultiplexed fastq files
 	Merged: pool1c, pool2c, pool3c ## [3] [barcodes_path]: Location of barcodes file
