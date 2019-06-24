@@ -102,5 +102,5 @@ Hicimos exactamente todos los mismos pasos anteriores utilizando el 'default' de
 	SNPs = 2293 #luego de --maf 0.01
 	genotyping rate final = 0.974182
 	
-Aca se pueden encontrar los archivos [`.ped`]() y [`.map`]() resultantes. 
+Aca se pueden encontrar los archivos [`.ped`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_mSNPs10_d.ped) y [`.map`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_mSNPs10_d.map) resultantes. 
 
