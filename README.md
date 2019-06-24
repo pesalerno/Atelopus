@@ -93,6 +93,6 @@ Finalmente, veamos los loci que tienen un minor allele frequency menos al 1%:
 
     ./plink --file input-filename_b --maf 0.01 --recode --out output-filename_c --noweb
     
-Con este ultimo filtro, solo se pierden un total de 42 SNPs, por lo que quedamos despues de este filtro con un total de 3935 SNPs. Luego de todos estos filtros tenemos nuestros archivos finales de [`.ped`]()y [`.map`]().
+Con este ultimo filtro, solo se pierden un total de 42 SNPs, por lo que quedamos despues de este filtro con un total de 3935 SNPs. Luego de todos estos filtros tenemos nuestros archivos finales de [`.ped`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.ped)y [`.map`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.map).
 
 	
