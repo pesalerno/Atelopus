@@ -23,7 +23,7 @@ Finalmente, para poder correr varios analisis de ipyrad y determinar el optimo p
 
 	ipyrad -p params-merged-params.txt -b clust86
 
-Los archivos de los parametros eran todos identicos a [este](https://github.com/pesalerno/Atelopus/blob/master/params-clust96.txt), solo variando el clustering threshold. Luego de eso, se editaron manualmente los params files en la linea 14:
+Los archivos de los parametros eran todos identicos a [este](https://github.com/pesalerno/Atelopus/blob/master/files/params-clust96.txt), solo variando el clustering threshold. Luego de eso, se editaron manualmente los params files en la linea 14:
 
 	0.96                           ## [14] [clust_threshold]: Clustering threshold for de novo assembly
 
@@ -36,15 +36,15 @@ para poner el clustering threshold correcto, y se montaron el resto de los pasos
 	ipyrad -p params-clust93.txt -s 34567
 	#etc....
 
-Luego de finalizados todos los analisis, se recopilaron resultados a nivel global (es decir, por genotipificacion/matriz de datos), utilizando los outputs de [clust86_stats.txt](https://github.com/pesalerno/Atelopus/blob/master/clust86_stats.txt) y de [s6\_cluster\_stats\_c86.txt](https://github.com/pesalerno/Atelopus/blob/master/s6_cluster_stats_c86.txt), lo que nos dieron los siguientes graficos:
+Luego de finalizados todos los analisis, se recopilaron resultados a nivel global (es decir, por genotipificacion/matriz de datos), utilizando los outputs de [clust86_stats.txt](https://github.com/pesalerno/Atelopus/blob/master/clust86_stats.txt) y de [s6\_cluster\_stats\_c86.txt](https://github.com/pesalerno/Atelopus/blob/master/files/s6_cluster_stats_c86.txt), lo que nos dieron los siguientes graficos:
 
 1. En este grafico se puede ver que tanto el numero de loci/clusters como el numero de "singletons" (clusters unicos para un individuo) aumenta relativamente gradual con cada incremento del threshold, con un aumento un poco mayor luego de clust_thresh=94. 
 
-![](https://github.com/pesalerno/Atelopus/blob/master/ipyrad-2.png)
+![](https://github.com/pesalerno/Atelopus/blob/master/figures/ipyrad-2.png)
 
 2. En este grafico se ve que a pesar de que el numero total de loci antes de filtros y de calculo de error incrementa bastante a medida que incrementa el clustering threshold, el numero de loci despues de todos los filtros incrementa muy poco. 
 
-![](https://github.com/pesalerno/Atelopus/blob/master/ipyrad-1.png)
+![](https://github.com/pesalerno/Atelopus/blob/master/figures/ipyrad-1.png)
 
 Finalmente, se observa que a partir del clustering threshold de 94%, la gran mayoria de los loci nuevos que se construyen son filtrados como basura, por lo que lo mejor para ser conservadores es escoger los resultados basados en la genotipificacion usando **clust\_thresh\_93**.
 
@@ -95,10 +95,10 @@ Finalmente, veamos los loci que tienen un minor allele frequency menos al 1%:
     
 Con este ultimo filtro, solo se pierden un total de 42 SNPs, por lo que quedamos despues de este filtro con un total de 3935 SNPs. Luego de todos estos filtros tenemos nuestros archivos finales de [`.ped`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.ped)y [`.map`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.map).
 
-Hicimos exactamente todos los mismos pasos anteriores utilizando el 'default' del parametro #22 (max_snps_locus) y tambien utilizando una matrix donde solo se permitian un maximo de 10 SNPs per locus, para sesgar este ultimo analisis hacia loci que son mas conservados. En este caso, se comenzaron con un total de 673,624 SNPs originalmente exportados de **ipyrad**, terminamos con: 
+Hicimos exactamente todos los mismos pasos anteriores utilizando el 'default' del parametro #22 (max_snps_locus) y tambien utilizando una matrix donde solo se permitian un maximo de 10 SNPs per locus, para sesgar este ultimo analisis hacia loci que son mas conservados. En este ultimo caso (max_SNPs_10), se comenzaron con un total de 673,624 SNPs originalmente exportados de **ipyrad**, terminamos con: 
 
 	SNPS = 2324 #luego de --geno 0.25
-	inds = 24
+	inds = 24 #luego de --mind 0.5
 	SNPs = 2293 #luego de --maf 0.01
 	genotyping rate final = 0.974182
 	
