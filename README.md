@@ -95,7 +95,7 @@ Finalmente, veamos los loci que tienen un minor allele frequency menos al 1%:
     
 Con este ultimo filtro, solo se pierden un total de 42 SNPs, por lo que quedamos despues de este filtro con un total de 3935 SNPs. Luego de todos estos filtros tenemos nuestros archivos finales de [`.ped`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.ped)y [`.map`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.map).
 
-Hicimos exactamente todos los mismos pasos anteriores utilizando el 'default' del parametro #22 (max_snps_locus) y tambien utilizando una matrix donde solo se permitian un maximo de 10 SNPs per locus, para sesgar este ultimo analisis hacia loci que son mas conservados. En este ultimo caso (max_SNPs_10), se comenzaron con un total de 673,624 SNPs originalmente exportados de **ipyrad**, terminamos con: 
+Hicimos exactamente todos los mismos pasos anteriores utilizando el 'default' del parametro #22 (max\_snps\_locus) y tambien utilizando una matrix donde solo se permitian un maximo de 10 SNPs per locus, para sesgar este ultimo analisis hacia loci que son mas conservados. En este ultimo caso (max\_SNPs_10), se comenzaron con un total de 673,624 SNPs originalmente exportados de **ipyrad**, terminamos con: 
 
 	SNPS = 2324 #luego de --geno 0.25
 	inds = 24 #luego de --mind 0.5
@@ -104,3 +104,4 @@ Hicimos exactamente todos los mismos pasos anteriores utilizando el 'default' de
 	
 Aca se pueden encontrar los archivos [`.ped`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_mSNPs10_d.ped) y [`.map`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_mSNPs10_d.map) resultantes. 
 
+Finalmente, transformamos nuestras matrices filtradas de formato `.ped` usando el programa [**PGDSpider**](http://www.cmpg.unibe.ch/software/PGDSpider/) para tener formatos [`.nex`]() y [`.phy`]() para **max\_SNPs\_10** y formatos [`.nex`]() y [`.phy`]() para **max\_SNPs\_20**.
