@@ -36,7 +36,7 @@ para poner el clustering threshold correcto, y se montaron el resto de los pasos
 	ipyrad -p params-clust93.txt -s 34567
 	#etc....
 
-Luego de finalizados todos los analisis, se recopilaron resultados a nivel global (es decir, por genotipificacion/matriz de datos), utilizando los outputs de [clust86_stats.txt](https://github.com/pesalerno/Atelopus/blob/master/clust86_stats.txt) y de [s6\_cluster\_stats\_c86.txt](https://github.com/pesalerno/Atelopus/blob/master/files/s6_cluster_stats_c86.txt), lo que nos dieron los siguientes graficos:
+Luego de finalizados todos los analisis, se recopilaron resultados a nivel global (es decir, por genotipificacion/matriz de datos), utilizando los outputs de [clust86_stats.txt](https://github.com/pesalerno/Atelopus/blob/master/files/clust86_stats.txt) y de [s6\_cluster\_stats\_c86.txt](https://github.com/pesalerno/Atelopus/blob/master/files/s6_cluster_stats_c86.txt), lo que nos dieron los siguientes graficos:
 
 1. En este grafico se puede ver que tanto el numero de loci/clusters como el numero de "singletons" (clusters unicos para un individuo) aumenta relativamente gradual con cada incremento del threshold, con un aumento un poco mayor luego de clust_thresh=94. 
 
@@ -93,10 +93,17 @@ Finalmente, veamos los loci que tienen un minor allele frequency menos al 1%:
 
     ./plink --file input-filename_b --maf 0.01 --recode --out output-filename_c --noweb
     
-Con este ultimo filtro, solo se pierden un total de 42 SNPs, por lo que quedamos despues de este filtro con un total de 3935 SNPs. Luego de todos estos filtros tenemos nuestros archivos finales de [`.ped`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.ped)y [`.map`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.map).
+Con este ultimo filtro, solo se pierden un total de 42 SNPs, por lo que quedamos despues de este filtro con un total de 3935 SNPs. Luego de todos estos filtros tenemos nuestros archivos finales de [`.ped`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.ped)y [`.map`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.map). Abajo estan los resultados resumidos:
+
+	SNPS = 830,228 #luego de exportar de ipyrad
+	SNPS = 3977 #luego de --geno 0.25
+	inds = 24 #luego de --mind 0.5
+	SNPs = 3935 #luego de --maf 0.01
+	genotyping rate final = 0.974593
 
 Hicimos exactamente todos los mismos pasos anteriores utilizando el 'default' del parametro #22 (max\_snps\_locus) y tambien utilizando una matrix donde solo se permitian un maximo de 10 SNPs per locus, para sesgar este ultimo analisis hacia loci que son mas conservados. En este ultimo caso (max\_SNPs_10), se comenzaron con un total de 673,624 SNPs originalmente exportados de **ipyrad**, terminamos con: 
 
+	SNPS = 673,624 #luego de exportar de ipyrad
 	SNPS = 2324 #luego de --geno 0.25
 	inds = 24 #luego de --mind 0.5
 	SNPs = 2293 #luego de --maf 0.01
