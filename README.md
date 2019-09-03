@@ -67,7 +67,7 @@ Primero, transformamos el archivo `.vcf` utilizando **vcftools** de esta manera:
 	vcftools --vcf path/to/file.vcf --plink --out filename
 
 
-Ahora que tenemos nuestros archivos `.ped` y `.map`, podemos correr los filtros en [plink](http://zzz.bwh.harvard.edu/plink/download.shtml#download), uno por uno, de la siguiente manera. 
+Ahora que tenemos nuestros archivos [`.ped`](https://github.com/pesalerno/Atelopus/blob/master/files/clust93-ALL.ped) y [`.map`](https://github.com/pesalerno/Atelopus/blob/master/files/clust93-ALL.map), podemos correr los filtros en [plink](http://zzz.bwh.harvard.edu/plink/download.shtml#download), uno por uno, de la siguiente manera. 
 
 
 Primero filtramos loci con demasiados datos que faltan:
@@ -111,4 +111,4 @@ Hicimos exactamente todos los mismos pasos anteriores utilizando el 'default' de
 	
 Aca se pueden encontrar los archivos [`.ped`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_mSNPs10_d.ped) y [`.map`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_mSNPs10_d.map) resultantes. 
 
-Finalmente, transformamos nuestras matrices filtradas de formato `.ped` usando el programa [**PGDSpider**](http://www.cmpg.unibe.ch/software/PGDSpider/) para tener formatos [`.nex`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_mSNPs10_d.nex) y [`.phy`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_mSNPs10_d.phy.txt) para **`max_SNPs_10`** y formatos [`.nex`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.nex) y [`.phy`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.phy.txt) para **`max_SNPs_20`**.
+Finalmente, transformamos nuestras matrices filtradas de formato `.ped` usando el programa [**PGDSpider**](http://www.cmpg.unibe.ch/software/PGDSpider/) para tener formatos [`.nex`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_mSNPs10_d.nex) y [`.phy`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_mSNPs10_d.phy.txt) para **`max_SNPs_10`** y formatos [`.nex`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.nex) y [`.phy`](https://github.com/pesalerno/Atelopus/blob/master/files/Atelopus-06_19_d.phy.txt) para **`max_SNPs_20`**. A pesar de que el individuo A. elegans_Durango fue filtrado automaticamente debido a la poca cantidad de datos, como era un individuo de interes generamos una matriz de [phylip donde se retenia este individuo](https://github.com/pesalerno/Atelopus/blob/master/files/clust93-elegans.phy). 
