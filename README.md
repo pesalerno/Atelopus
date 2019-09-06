@@ -46,13 +46,16 @@ Luego de finalizados todos los analisis, se recopilaron resultados a nivel globa
 
 ![](https://github.com/pesalerno/Atelopus/blob/master/figures/ipyrad-1.png)
 
-Finalmente, se observa que a partir del clustering threshold de 94%, la gran mayoria de los loci nuevos que se construyen son filtrados como basura, por lo que lo mejor para ser conservadores es escoger los resultados basados en la genotipificacion usando **clust\_thresh\_93**.
+Finalmente, se observa que a partir del clustering threshold de 94%, la gran mayoria de los loci nuevos que se construyen son filtrados como basura, por lo que lo mejor para ser conservadores es escoger los resultados basados en la genotipificacion usando **clust\_thresh\_93**. Para este clustering, se obtuvieron un rango variable de "per locus coverage" entre los individuos, lo cual se puede ver en [este archivo](https://github.com/pesalerno/Atelopus/blob/master/files/c93_s3_cluster_stats.txt), asi como tambien un rango variable de "number of clusters in consensus", lo cual se puede ver en [este archivo](https://github.com/pesalerno/Atelopus/blob/master/files/c93_s5_consens_stats.txt). 
 
 Luego de probar los efectos de los distintos clustering thresholds, quisimos evaluar los efectos de tres parametros adicionales utilizando como base el **clust\_thresh\_93**: 
 
 	5, 5                           ## [19] [max_Ns_consens]: Max N's (uncalled bases) in consensus (R1, R2)
+		##other parameter values tested: 2,3,4
 	8, 8                           ## [20] [max_Hs_consens]: Max Hs (heterozygotes) in consensus (R1, R2)
+		##other parameter values tested: 2,4,6,10
 	20, 20                         ## [22] [max_SNPs_locus]: Max # SNPs per locus (R1, R2)
+		##other parameter values tested: 10,14,16,18
 
 En estos analisis, encontramos el siguiente resultado en cuanto a numeros de SNPs finales pre y post-filtering: 
 
