@@ -1,0 +1,22 @@
+vsearch v2.0.3_linux_x86_64, 62.9GB RAM, 24 cores
+/home/puce/miniconda2/lib/python2.7/site-packages/bin/vsearch-linux-x86_64 -cluster_smallmem /media/puce/DD/Atelopus/ddrad/clust93_across/clust93_catshuf.tmp -strand plus -query_cov 0.75 -minsl 0.5 -id 0.93 -userout /media/puce/DD/Atelopus/ddrad/clust93_across/clust93.utemp -notmatched /media/puce/DD/Atelopus/ddrad/clust93_across/clust93.htemp -userfields query+target+qstrand -maxaccepts 1 -maxrejects 0 -fasta_width 0 -threads 10 -fulldp -usersort -log /media/puce/DD/Atelopus/ddrad/clust93_across/s6_cluster_stats.txt 
+Started  Sat Jun  8 17:30:45 2019315048615 nt in 2709609 seqs, min 35, max 142, avg 116
+
+
+      Alphabet  nt
+    Word width  8
+     Word ones  8
+        Spaced  No
+        Hashed  No
+         Coded  No
+       Stepped  No
+         Slots  65536 (65.5k)
+       DBAccel  100%
+
+Clusters: 1293897 Size min 1, max 298, avg 2.1
+Singletons: 937237, 34.6% of seqs, 72.4% of clusters
+
+
+Finished Sat Jun  8 21:10:29 2019
+Elapsed time 219:44
+Max memory 3.8GB
